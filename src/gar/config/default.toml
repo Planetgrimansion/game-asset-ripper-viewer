@@ -1,0 +1,26 @@
+# Default configuration for game-asset-ripper-viewer.
+# Override per-project with config/local.toml (gitignored).
+
+out_dir = "out"
+driver = "fs"          # fs | pack | sqlite
+workers = 0            # 0 = auto (cpu_count)
+max_blob_mb = 512
+hash_names = true      # name output files by content hash
+keep_original_bytes = false
+
+# Only rip these kinds; empty = all.
+# kinds = ["texture", "mesh", "audio"]
+
+[processor_options.texture]
+# BC7 -> PNG by default; set to "ktx2" to keep GPU-compressed.
+target = "png"
+keep_mips = false
+
+[processor_options.mesh]
+# OBJ is the safest interchange; glTF keeps materials.
+target = "obj"
+merge_submeshes = true
+
+[processor_options.audio]
+# "wav" (lossless-ish), "ogg", or "raw".
+target = "wav"
