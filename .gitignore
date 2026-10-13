@@ -1,0 +1,61 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Runtime output
+/out/
+/exports/
+/rips/
+/captures/
+*.assetpack
+*.ripdb
+*.log
+
+# Local overrides
+config/local.toml
+config/*.local.yaml
+profiles/local/
+
+# Native build artifacts
+*.obj
+*.o
+*.so
+*.dll
+*.lib
+*.exp
+*.pdb
+/bin/
+/obj/
+
+# Test fixtures (large, downloaded on demand)
+tests/fixtures/*.pak
+tests/fixtures/*.bundle
+tests/fixtures/*.assets
